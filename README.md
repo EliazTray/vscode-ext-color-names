@@ -1,7 +1,7 @@
 # color-names
 
-This is the README for your extension "color-names". After writing up a brief description, we recommend including the following sections.
+generate color name by the text in clipboard.
 
 ## Features
 
--[x] generate colorName via clipboard color.
+- [x] generate colorName via clipboard color.

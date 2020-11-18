@@ -1,6 +1,6 @@
 {
     "name": "color-names",
-    "displayName": "color names",
+    "displayName": "color-names",
     "description": "",
     "version": "0.0.1",
     "engines": {
@@ -52,5 +52,8 @@
         "axios": "^0.21.0",
         "closestvector": "^0.6.0"
     },
-    "publisher": "eliaztray"
+    "publisher": "eliaztray",
+    "repository": {
+        "url": "https://github.com/EliazTray/vscode-ext-color-names"
+    }
 }
