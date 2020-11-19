@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-interface ColorEntity {
+export interface ColorEntity {
     name: string;
     hex: string;
     rgb: { r: number; g: number; b: number };
@@ -19,23 +19,11 @@ export function parseColor(hexText: string): [number, number, number] {
         const str = hexMatch[1];
         let result;
         if (str.length === 3) {
-            result = [
-                str.charAt(0).repeat(2),
-                str.charAt(1).repeat(2),
-                str.charAt(2).repeat(2),
-            ] as const;
+            result = [str.charAt(0).repeat(2), str.charAt(1).repeat(2), str.charAt(2).repeat(2)] as const;
         } else {
-            result = [
-                str.slice(0, 2),
-                str.slice(2, 4),
-                str.slice(4, 6),
-            ] as const;
+            result = [str.slice(0, 2), str.slice(2, 4), str.slice(4, 6)] as const;
         }
-        return result.map((hex) => parseInt(hex, 16)) as [
-            number,
-            number,
-            number
-        ];
+        return result.map((hex) => parseInt(hex, 16)) as [number, number, number];
     }
-    throw new Error('not valid color');
+    throw new Error('Not valid color value!');
 }
